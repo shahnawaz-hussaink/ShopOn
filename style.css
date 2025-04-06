@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,10 @@
 }
 
 
-body {
+html,body {
     background-color: #EDEDD8;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -40,7 +43,7 @@ body {
 
 .cate div a {
     text-decoration: none;
-    color: black;
+    color: #000000cc;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
@@ -78,7 +81,7 @@ body {
     font-size: 16px;
 }
 
-/* Icons */
+
 .others {
     display: flex;
     justify-content: flex-end;
@@ -88,6 +91,130 @@ body {
 .others img {
     height: 25px;
     cursor: pointer;
+}
+
+.hero-img{
+    margin-top: 2%;
+}
+
+.hero-img img{
+    width: 100%;
+}
+
+.brands{
+    height: auto;
+    width: 100%;
+}
+
+.brand-tag{
+    height: 50px;
+    width: 100%;
+    margin : 25px 0 0 25px;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.brand-img-container{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px;
+    margin: -10px;
+    gap: 0;
+    scroll-behavior: smooth;
+}
+
+.brand-img{
+    flex: 0 0 auto;
+    width: clamp(120px, 40vw, 250px);
+}
+
+.brand-img img {
+    width: 100%;    
+    height: auto;    
+    object-fit: cover;
+}
+
+.categ {
+    padding: 20px;
+}
+  
+.shop-by-cate {
+    height: 50px;
+    width: 100%;
+    margin : 25px 0 0 10px;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+  
+.cete-container-one,
+.cete-container-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+  
+.cate-imgs {
+    flex: 0 0 calc(20% - 16px); 
+    max-width: 160px;
+}
+  
+.cate-imgs img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+  
+.footer{
+    height: 350px;
+    width: 100%;
+    background-color: #F8F8ED;
+}
+.container-footer{
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.content-div{
+    padding:  50px 50px 0 50px;
+}
+
+.heading-foot-topics{
+    margin: 10px;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.content{
+    margin: 15px 0 10px 10px;
+    
+}
+.content a{
+    text-decoration: none;
+    color: #00000090;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 13px;
+}
+
+.copyright{
+    height: 25px;
+    width: 100%;
+    margin: 0 auto;
+    background: #F8F8ED;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    
 }
 
 
@@ -101,18 +228,59 @@ body {
 }
 
 @media (max-width: 768px) {
-    #navbar {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        text-align: center;
-        height: auto;
-        gap: 1rem;
+    .others{
+        display: none;
+    }
+    .cate {
+        position: relative;   
+        right: 30px;     
+        width: 200%;
+    }
+    .cate div a {
+        color: #000000cc;
+        font-size: 12px;
+
     }
     .cate {
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.7rem;
     }
     .others {
         justify-content: center;
     }
+
+    .brand-tag{
+        font-size: 20px;
+    }
+    .shop-by-cate{
+        font-size: 20px;
+    }
+
+    .footer{
+        height: 650px;
+    }
+    .container-footer{
+        grid-template-columns: repeat(3,3fr);
+    }
+    .content-div{
+        padding:  10px 10px 0 10px;
+    }
+    
+    .heading-foot-topics{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .content{
+        margin: 15px 0 10px 10px;
+        
+    }
+    .content a{
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .copyright{
+        font-size: 12px;
+    }
 }
+
+  
