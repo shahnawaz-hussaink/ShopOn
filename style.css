@@ -284,3 +284,11 @@ html,body {
 }
 
   
+.brand-img-container,
+.cete-container-one,
+.cete-container-two {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  will-change: transform;
+}
